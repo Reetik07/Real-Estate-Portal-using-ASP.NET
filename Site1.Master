@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin: 0; padding: 0;">
+    <form id="form2" runat="server">
+        <div style="border-style: none; border-width: 0px; margin-left: 0px;">
+            <div style="border-style: none; border-width: 0px; margin-left: 0px; float: left; padding: 5px;">
+                LoanBuddy
+            </div>
+            <div style="border-style: none; border-width: 0px; margin-left: 0px; float: right; padding: 5px;">
+                <asp:Image ID="Image1" runat="server" Height="30px" ImageAlign="Middle" ImageUrl="~/user.png" Width="30px" />
+                <asp:Label ID="Label1" runat="server" Text="Label" style="margin-left: 10px; margin-right: 10px;"></asp:Label>
+            </div>
+            <br />
+            <asp:Menu ID="Menu1" runat="server" BackColor="#00CC99" BorderStyle="None" BorderWidth="0px" ForeColor="White" Height="40px" Orientation="Horizontal" style="position: sticky; top: 0;" Width="100%">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Registration" Value="Registration">
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Registration" Value="Registration"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                </Items>
+                <LevelMenuItemStyles>
+                    <asp:MenuItemStyle BackColor="#00CC99" Font-Underline="False" ForeColor="White" />
+                </LevelMenuItemStyles>
+                <LevelSubMenuStyles>
+                    <asp:SubMenuStyle BackColor="#00CC99" Font-Underline="False" />
+                </LevelSubMenuStyles>
+                <StaticHoverStyle BackColor="White" ForeColor="#00CC99" />
+                <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <span class="field field--name-title field--type-string field--label-hidden" style="box-sizing: border-box; font-size: small;">©</span> 2021&nbsp; LoanBuddy
+        </div>
+    </form>
+</body>
+</html>
